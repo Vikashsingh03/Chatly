@@ -41,8 +41,8 @@ export const signUp = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 7 * 24 * 60 * 60 * 1000,
-      sameSite: "Strict",
-      secure: false // Set to true in production with HTTPS
+      sameSite: "None",
+      secure: true // Set to true in production with HTTPS
     })
 
     return res.status(201).json(user)
@@ -71,8 +71,8 @@ export const login = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 7 * 24 * 60 * 60 * 1000,
-      sameSite: "Strict",
-      secure: false // Set to true in production with HTTPS
+      sameSite: "None",
+      secure: true // Set to true in production with HTTPS
     })
 
     return res.status(200).json(user)
