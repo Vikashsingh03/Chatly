@@ -6,7 +6,7 @@ import {Provider} from "react-redux"
 import { store } from '../src/redux/store.js'
 
 
-export const serverUrl = "http://localhost:8000"
+export const serverUrl = "https://chatly-backend-xho3.onrender.com"
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
